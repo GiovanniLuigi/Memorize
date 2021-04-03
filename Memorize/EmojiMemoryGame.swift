@@ -17,8 +17,8 @@ class EmojiMemoryGame: ObservableObject {
     }
     
     init() {
-        let emojis = ["👻", "💩", "🕸", "🕷", "🦉", "🧛🏻"]
-        model = MemoryGame(numberOfPairsOfCards: 3, cardContentFactory: { pairIndex in
+        let emojis = ["👻", "💩", "🕷", "🦉", "🧛🏻"]
+        model = MemoryGame(numberOfPairsOfCards: Int.random(in: 3...emojis.count), cardContentFactory: { pairIndex in
             emojis[pairIndex]
         })
     }
