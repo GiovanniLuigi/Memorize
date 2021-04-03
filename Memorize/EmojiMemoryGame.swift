@@ -8,9 +8,9 @@
 import Foundation
 
 
-class EmojiMemoryGame {
+class EmojiMemoryGame: ObservableObject {
     
-    private var model: MemoryGame<String>
+    @Published private var model: MemoryGame<String>
     
     var cards: Array<MemoryGame<String>.Card> {
         model.cards
